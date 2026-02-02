@@ -1,32 +1,39 @@
-# Padrão de Commit (Conventional Commits)
+# Guia de Contribuição e Padrões de Commit
 
-Arquivo de padronização de commits
-
-O formato deve ser: `<tipo>(escopo opcional): <descrição curta>`
-
-**Tipos principais:**
-
-* **feat:** Uma nova funcionalidade (ex: `feat(ui): adiciona widget do RU`).
-* **fix:** Correção de um bug.
-* **docs:** Alterações apenas na documentação (é o que você usará agora).
-* **style:** Alterações que não afetam o sentido do código (espaços, formatação, etc).
-* **refactor:** Alteração no código que não corrige bug nem adiciona funcionalidade.
-* **chore:** Atualizações de tarefas de build, pacotes, etc.
+Bem-vindo ao desenvolvimento do **UnBook 2.0**! Para manter a organização do projeto e facilitar o rastreamento de mudanças, adotamos o padrão de **Conventional Commits**.
 
 ---
 
-### Estilos de commits
+## 🛠 Padrão de Commit
 
-use essas opções:
+O formato de cada mensagem de commit deve seguir a seguinte estrutura:
+`<tipo>(escopo opcional): <descrição curta>`
 
-#### Opção A: Simples e Direta (Recomendada)
+### Tipos Principais:
 
-```
+| Tipo | Descrição | Exemplo |
+| :--- | :--- | :--- |
+| **feat** | Uma nova funcionalidade | `feat(ui): adiciona widget do RU` |
+| **fix** | Correção de um bug | `fix(auth): corrige erro no login @aluno` |
+| **docs** | Alterações apenas na documentação | `docs: atualiza roadmap de desenvolvimento` |
+| **style** | Mudanças de formatação/espaço (não afeta o código) | `style: formata identação do sitemap.md` |
+| **refactor** | Refatoração de código que não muda funcionalidade | `refactor: otimiza query de busca de professores` |
+| **chore** | Atualizações de build, pacotes ou infra | `chore: adiciona docker-compose inicial` |
+
+---
+
+## 📝 Exemplos de Mensagens
+
+### Opção 1: Simples e Direta (Uso geral)
+Ideal para mudanças rápidas e objetivas.
+```text
 docs: inicializa estrutura de documentação
-```
-#### Opção B: Mais detalhada (Se for fazer via terminal)
 
-Se quiser ser bem específico sobre o que incluiu:
+```
+
+### Opção 2: Detalhada (Corpo do commit)
+
+Ideal para grandes adições ou alterações estruturais.
 
 ```text
 docs: setup inicial da arquitetura do UnBook 2.0
@@ -39,20 +46,33 @@ docs: setup inicial da arquitetura do UnBook 2.0
 
 ---
 
-### Como fazer o commit (Comandos)
+## 💻 Como Realizar o seu Commit (Terminal)
 
-Se você estiver usando o terminal dentro da pasta do projeto:
+Siga o fluxo abaixo para garantir que suas alterações sejam enviadas corretamente:
 
+1. **Adicione os arquivos:**
 ```bash
-# Adiciona todos os arquivos criados
 git add .
 
-# Faz o commit com a mensagem padronizada
-git commit -m "docs: inicializa estrutura de documentação"
+```
 
-# Envia para o GitHub
+
+2. **Crie o commit com a mensagem padronizada:**
+```bash
+git commit -m "tipo: descrição clara do que foi feito"
+
+```
+
+3. **Envie para o repositório remoto:**
+```bash
 git push origin main
 
 ```
 
 ---
+
+## 💡 Dicas de Boas Práticas
+
+* **Commits Atômicos:** Tente fazer commits pequenos que resolvam apenas uma coisa por vez.
+* **Escopo:** Use o escopo (os parênteses) para indicar a área afetada, como `(ui)`, `(backend)`, `(scrapper)`.
+* **Mensagens em Português:** Como o projeto é focado na comunidade da UnB, manteremos as descrições em português (PT-BR).
